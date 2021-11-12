@@ -1,0 +1,13 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h1>{{request.user}}</h1>
+        </div>
+        <div class="card-body">
+            <span><b>Active account: </b>{{request.user.is_active}}</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

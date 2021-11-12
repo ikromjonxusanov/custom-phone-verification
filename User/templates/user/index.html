@@ -1,0 +1,15 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="p-5 rounded mt-5" style="background-color: #dfdfdf;">
+        <h1>This is Home page</h1>
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'profile' %}" class="btn btn-secondary">Profile</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+            <a href="{% url 'registration' %}" class="btn btn-success">Registration</a>
+        {% endif %}
+        
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <form action="/login/verification/" method="POST" >
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="code">Code</label>
+                    <input type="number" class="form-control" id="code" name="code" maxlength="6" placeholder="Enter cod">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
